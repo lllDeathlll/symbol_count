@@ -2,16 +2,22 @@ use std::{collections::HashMap, io};
 
 fn main() {
     loop {
+        // Reading text from user input
         let mut text = String::new();
 
         io::stdin()
             .read_line(&mut text)
             .expect("Failed to read the line");
 
+        // Getting chars vector from string
         let letters: Vec<char> = text.trim().chars().collect();
-
+        // Creating hashmap
         let mut letters_map: HashMap<char, i32> = HashMap::new();
 
+        /*
+        Looping through every letter
+        and adding 1 for each appearance
+        */
         for letter in letters {
             if letters_map.contains_key(&letter) {
                 let value = letters_map.get(&letter).unwrap();
@@ -21,8 +27,10 @@ fn main() {
             }
         }
 
+        // Checks if any value is greater than one
         let found = letters_map.values().any(|&value| value > 1);
 
+        // Prints result
         if found {
             println!("Не все символы встречаются только 1 раз");
         } else {
