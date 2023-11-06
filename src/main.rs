@@ -1,6 +1,10 @@
 use std::{collections::HashMap, io};
 
 fn main() {
+    // Asking user to type a string
+    println!("Hi, I'm a program that checks if any letter in text repeats!");
+    println!("Enter any text:");
+
     loop {
         // Reading text from user input
         let mut text = String::new();
