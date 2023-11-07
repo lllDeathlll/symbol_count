@@ -36,9 +36,9 @@ fn main() {
 
         // Prints result
         if found {
-            println!("Не все символы встречаются только 1 раз");
+            println!("Not all symbols appear only once");
         } else {
-            println!("Все символы встречаются только 1 раз");
+            println!("All symbols appear only once");
         }
     }
 }
